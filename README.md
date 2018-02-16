@@ -1,6 +1,6 @@
-## Website Performance Optimization portfolio project
+# Website Performance Optimization portfolio project
 
-Instructions:
+## Instructions:
 
 
 To view the portfolio website:
@@ -21,7 +21,7 @@ Navigate to views folder then double-click pizza.html to open the pizza page in 
 
 
 
-Optimizations in Pizza Site to Increase the Frame-rate to 60 fps When Scrolling:
+## Optimizations in Pizza Site to Increase the Frame-rate to 60 fps When Scrolling:
 
 
 Changed all instances of "querySelector" to "getElementById" or "getElementsByClassName" depending on whether a class or id is needed.
@@ -34,7 +34,7 @@ Moved "scrollTop" declaration outside the loop to improve performance.
 
 
 
-Optimizations in Pizza Site to Resize Pizzas is Less Than 5 ms Using the Pizza Size Slider:
+## Optimizations in Pizza Site to Resize Pizzas is Less Than 5 ms Using the Pizza Size Slider:
 
 
 Changed all instances of "querySelector" to "getElementById" or "getElementsByClassName" depending on whether a class or id is needed.
