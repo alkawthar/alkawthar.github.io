@@ -20,6 +20,7 @@ Navigate to views folder then double-click pizza.html to open the pizza page in 
 
 
 
+
 Optimizations in Pizza Site to Increase the Frame-rate to 60 fps When Scrolling:
 
 
@@ -28,6 +29,7 @@ Changed all instances of "querySelector" to "getElementById" or "getElementsByCl
 Major changes were made to "updatePositions" function which moves the sliding background pizzas based on scroll position.
 
 Moved "scrollTop" declaration outside the loop to improve performance.
+
 
 
 
