@@ -558,7 +558,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Calculates number of pizzas needed to fill the browser window.
   var numOfPizzas = (window.innerHeight / 75) + (window.innerWidth / 75);
-  console.log(numOfPizza);
+  console.log(numOfPizzas);
   var movingPizzas = document.getElementById("movingPizzas1");
   for (var i = 0; i < numOfPizzas; i++) {
     var elem = document.createElement('img');
