@@ -526,10 +526,15 @@ function updatePositions() {
   // moved scrollTop declaration outside the loop to improve performance
 // document.body.scrollTop is no longer supported in Chrome.
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  
+  // calculate phase values outside the main loop to improve performance
+  var phase = [];
+  for (var i = 0; i < 5; i++) {
+      phase.push(Math.sin(scrollTop / 1250 + i) * 100);
+  }
+  
   for (var i = 0; i < items.length; i++) {
-
-       var phase = Math.sin((scrollTop / 1250) + (i % 5));
-        items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+       items[i].style.left = items[i].basicLeft + phase[i%5] + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -549,8 +554,11 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  
+  // Calculates number of pizzas needed to fill the browser window.
+  var numOfPizzas = (window.innerHeight / 75) + (window.innerWidth / 75);
   var movingPizzas = document.getElementById("movingPizzas1");
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < numOfPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
