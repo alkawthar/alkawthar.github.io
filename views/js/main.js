@@ -533,7 +533,8 @@ function updatePositions() {
       phase.push(Math.sin(scrollTop / 1250 + i) * 100);
   }
   
-  for (var i = 0; i < items.length; i++) {
+  var itemsLength = items.length;
+  for (var i = 0; i < itemsLength; i++) {
        items[i].style.left = items[i].basicLeft + phase[i%5] + 'px';
   }
 
@@ -557,6 +558,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Calculates number of pizzas needed to fill the browser window.
   var numOfPizzas = (window.innerHeight / 75) + (window.innerWidth / 75);
+  console.log(numOfPizza);
   var movingPizzas = document.getElementById("movingPizzas1");
   for (var i = 0; i < numOfPizzas; i++) {
     var elem = document.createElement('img');
