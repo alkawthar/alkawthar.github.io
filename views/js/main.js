@@ -529,8 +529,8 @@ function updatePositions() {
   
   // calculate phase values outside the main loop to improve performance
   var phase = [];
-  for (var i = 0; i < 5; i++) {
-      phase.push(Math.sin(scrollTop / 1250 + i) * 100);
+  for (var k = 0; k < 5; k++) {
+      phase.push(Math.sin(scrollTop / 1250 + k) * 100);
   }
   
   var itemsLength = items.length;
